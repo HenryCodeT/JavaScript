@@ -70,6 +70,7 @@ img {
     align-items: center;
     background-color: var(--main-color);
 }
+
 .panel {
     position: fixed;
     z-index: 998;
@@ -81,15 +82,16 @@ img {
     background-color: var(--second-modal-color);
     
     /* opacitidad */
-    /* opacity: 0; */
+    opacity: 0;
+    visibility: hidden;
     /* opacitidad */
     
     /* menu aparezca de cualquiera de los 4 lados */
-    transition: transform .3s ease;
+    /* transition: transform .3s ease; */
     /* menu aparezca de cualquiera de los 4 lados */
     
     /* menu aparezca de la opacidad */
-    /* transition: transform .3s ease, opacity 0.5s ease; */
+    transition: transform .3s ease, opacity 0.5s ease;
     /* menu aparezca de la opacidad */
     
     /* de arriba */
@@ -99,12 +101,13 @@ img {
     /* de derecha */
     /* transform: translate(100%,0); */
     /* de izquierda */
-    transform: translate(-100%,0);
+    /* transform: translate(-100%,0); */
 }
 
 .panel.is-active {
     transform: translate(0,0);
     opacity: 1;
+    visibility: visible;
 }
 
 .menu {
